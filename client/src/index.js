@@ -1,21 +1,39 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './containers/App/App'
-import registerServiceWorker from './registerServiceWorker'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Login from './components/Login/Login'
-class RootApp extends React.Component {
-  render () {
-    return (
-      <Router>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './containers/App';
+import About from './containers/About';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const Routes = () => {
+    return (<Router>
         <div>
-          <Route exact path='/' component={App} />
-          <Route path='/login' component={Login} />
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Graduation</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <Link className="nav-link" to="/">Home</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link className="nav-link" to="/about">About</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div>
+                <Route path="/" exact component={App} />
+                <Route path="/about/" component={About} />
+            </div>
         </div>
-      </Router>
-    )
-  }
+    </Router>)
 }
-ReactDOM.render(<RootApp />, document.getElementById('root'))
-registerServiceWorker()
+
+ReactDOM.render(<Routes />, document.getElementById('root'));
+

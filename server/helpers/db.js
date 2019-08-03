@@ -1,37 +1,7 @@
-const config = require('../knexfile')[process.env.NODE_ENV || 'development']
-
-const knex = require('knex')(config)
-
 const getUsers = () => {
-  return knex.select().from('users')
-}
-const saveUser = (name, email, password, city, postcode) => {
-  return knex('users')
-    .insert({ name, email, password, city, postcode })
-    .returning('*')
-}
-const getSingleUser = (email, password) => {
-  return knex('users').where({ email, password }).first()
-}
-const getUserProfile = userId => {
-  return knex('users')
-    .select('user_id', 'email', 'name')
-    .where({ user_id: userId })
-    .first()
+  return [{ user: 'test' }];
 }
 
-const updateUser = data => {
-  return knex.table('users').where('user_id', '=', data.user_id).update({
-    name: data.name,
-    email: data.email,
-    city: data.city,
-    postcode: data.postcode
-  })
-}
 module.exports = {
-  getUsers,
-  updateUser,
-  getSingleUser,
-  getUserProfile,
-  saveUser
+  getUsers
 }
