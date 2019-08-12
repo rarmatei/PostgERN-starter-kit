@@ -13,7 +13,6 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 app.use(cors())
-app.use(bodyParser.json())
 
 app.use('/auth', auth)
 app.use('/user', passport.authenticate('jwt', { session: false }), user)
