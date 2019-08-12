@@ -7,7 +7,7 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "prettier-standard './**/*.js'",
-    "dev": "nodemon app.js",
+    "dev": "NODE_ENV=development nodemon app.js",
     "recreate-db": "psql -U postgres -f __db/recreate_db.sql && psql -U cyf -d cyf_hotels -f __db/create-db.sql"
   },
   "author": "",
