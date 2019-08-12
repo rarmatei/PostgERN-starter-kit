@@ -6,7 +6,7 @@ var fs = require("fs");
 //TODO change names of these and the sql file names
 var sql1 = fs.readFileSync(require.resolve("./create-db.sql")).toString();
 // var sql2 = fs.readFileSync(require.resolve("./recreate_db.sql")).toString();
-console.log(config);
+console.log("CONFIG: ", config);
 
 const pool = new Pool(config);
 
@@ -17,5 +17,6 @@ pool.query(sql1, function(err, result) {
     console.log("error: ", err);
     process.exit(1);
   }
+  console.log("FINISHED!")
   process.exit(0);
 });
