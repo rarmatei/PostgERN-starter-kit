@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "prettier-standard './**/*.js'",
     "dev": "NODE_ENV=development nodemon app.js",
-    "recreate-db": "psql -U postgres -f __db/recreate_db.sql && psql -U cyf -d cyf_hotels -f __db/create-db.sql"
+    "recreate-db": "node ./__db/seed-db.js"
   },
   "author": "",
   "license": "ISC",

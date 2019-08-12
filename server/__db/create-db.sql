@@ -1,3 +1,8 @@
+drop table if exists bookings;
+drop table if exists hotels;
+drop table if exists customers;
+
+
 CREATE TABLE customers (
   id       SERIAL PRIMARY KEY,
   name     VARCHAR(30) NOT NULL,
