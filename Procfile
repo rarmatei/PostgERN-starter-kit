@@ -1,1 +1,1 @@
-release: npm --prefix server run recreate-db
+release: npm --prefix server run recreate-db:prod
