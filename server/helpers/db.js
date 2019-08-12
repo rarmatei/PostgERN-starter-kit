@@ -1,14 +1,7 @@
 const { Pool } = require("pg");
+const config = require("../db-config")[process.env.NODE_ENV || "development"];
 
-//TODO move connection to a different file then import it here with the different configs
-// https://github.com/CodeYourFuture/orula/blob/dev/server/knexfile.js
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "cyf_hotels",
-  password: "password",
-  port: 5432
-});
+const pool = new Pool(config);
 
 const getHotels = () => {
   return new Promise(resolve => {

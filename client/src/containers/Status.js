@@ -4,7 +4,8 @@ import { getStatus, getUsers, getHotels } from '../api/status';
 class Status extends React.Component {
   state = {
     status: null,
-    hotels: []
+    hotels: [],
+    users: []
   }
 
   componentDidMount() {
@@ -14,6 +15,9 @@ class Status extends React.Component {
     getHotels().then(response => {
       this.setState({hotels: response.data});
     })
+    getUsers().then(response => {
+      this.setState({users: response.data});
+    });
 
 
   }
@@ -28,6 +32,12 @@ class Status extends React.Component {
         <ul>
           {
             this.state.hotels.map(hotel => <li key={hotel.id}>hotel: {hotel.name}</li>)
+          }
+        </ul>
+        users:
+        <ul>
+          {
+            this.state.users.map(user => <li>user: {user.user}</li>)
           }
         </ul>
       </div>
