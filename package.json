@@ -9,7 +9,7 @@
       "start": "npm run server",
       "install:client": "npm --prefix client install",
       "build:client": "npm --prefix client build",
-      "heroku-postbuild": "npm run install:client & npm run build:client"
+      "heroku-postbuild": "npm run install:client && npm run build:client"
     },
     "cacheDirectories": [
       "node_modules",
