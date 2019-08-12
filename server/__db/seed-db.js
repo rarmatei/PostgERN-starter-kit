@@ -1,5 +1,5 @@
 const { Pool } = require("pg");
-const config = require("../db-config")[process.env.NODE_ENV || "development"];
+const config = require("./db-config")[process.env.NODE_ENV || "development"];
 var fs = require("fs");
 
 //TODO change names of these and the sql file names
