@@ -2,9 +2,11 @@ const { Pool } = require("pg");
 const config = require("./db-config")[process.env.NODE_ENV || "development"];
 var fs = require("fs");
 
+
 //TODO change names of these and the sql file names
 var sql1 = fs.readFileSync(require.resolve("./create-db.sql")).toString();
 // var sql2 = fs.readFileSync(require.resolve("./recreate_db.sql")).toString();
+console.log(config);
 
 const pool = new Pool(config);
 
