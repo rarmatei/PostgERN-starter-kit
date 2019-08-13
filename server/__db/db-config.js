@@ -6,8 +6,7 @@ module.exports = {
         password: "password",
         port: 5432
       },
-    production: process.env.DATABASE_URL,
-    test: {
+    production: {
       user: "xmsqbexfqtkohz",
       host: "ec2-54-217-219-235.eu-west-1.compute.amazonaws.com",
       database: "d1c5h9fthlio6v",
