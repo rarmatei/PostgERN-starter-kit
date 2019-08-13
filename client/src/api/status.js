@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const getStatus = () => {
-    return axios.get('/api/status')
+    return fetch('/api/status').then(res => res.text())
 }

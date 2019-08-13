@@ -8,7 +8,7 @@ class Status extends React.Component {
 
   componentDidMount() {
     getStatus().then(response => {
-      this.setState({status: response.data})
+      this.setState({status: response})
     })
   }
 
