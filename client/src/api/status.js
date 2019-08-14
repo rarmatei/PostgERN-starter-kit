@@ -1,13 +1,11 @@
-import axios from 'axios';
-
 export const getStatus = () => {
-    return axios.get('/api/status')
+    return fetch('/api/status').then(res => res.text())
 }
 
 export const getUsers = () => {
-    return axios.get('/api/users');
+    return fetch('/api/users');
 }
 
 export const getHotels = () => {
-    return axios.get('/api/hotels');
+    return fetch('/api/hotels');
 }
