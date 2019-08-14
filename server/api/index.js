@@ -12,4 +12,10 @@ router.get('/users', (req, res) => {
   })
 })
 
+router.get('/hotels', (req, res) => {
+  db.getHotels().then(hotels => {
+    res.json(hotels);
+  })
+})
+
 module.exports = router
