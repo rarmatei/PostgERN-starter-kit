@@ -23,7 +23,8 @@ Once the other team members go the above you'll need to:
 Development workflow:
 
 Anytime you're ready to work again on the project just do:
-- `npm run dev` in root (changes you make should be picked up automatically)
+- `npm run dev` in `server` (changes you make should be picked up automatically)
+- open another terminal window --> `npm run dev` in `client`
 
 If you want to work a new ticket/feature:
 - `git checkout master`
