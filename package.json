@@ -7,6 +7,7 @@
       "install": "npm --prefix server install & npm --prefix client install",
       "server": "npm --prefix server start",
       "dev": "npm --prefix client start & npm --prefix server run dev",
+      "recreate-db": "npm --prefix server run recreate-db",
       "start": "npm run server",
       "build:client": "npm --prefix client run build",
       "heroku-postbuild": "npm run build:client"

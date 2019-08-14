@@ -1,2 +1,2 @@
-drop database if exists cyf_hotels;
-CREATE DATABASE cyf_hotels OWNER postgres;
+drop database if exists cyf_test;
+CREATE DATABASE cyf_test OWNER postgres;

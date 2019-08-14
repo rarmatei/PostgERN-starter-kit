@@ -2,7 +2,7 @@ module.exports = {
     development: {
         user: "postgres",
         host: "localhost",
-        database: "cyf_hotels",
+        database: "cyf_test",
         password: "password",
         port: 5432
       },
