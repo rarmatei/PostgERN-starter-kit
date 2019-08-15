@@ -45,7 +45,7 @@
   },
   "lint-staged": {
     "*": [
-      "prettier-eslint",
+      "prettier-eslint --write",
       "git add"
     ]
   }
