@@ -32,7 +32,6 @@
     ]
   },
   "devDependencies": {
-    "@codeyourfuture/eslint-config-standard": "^2.0.0",
     "eslint": "^6.1.0",
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
