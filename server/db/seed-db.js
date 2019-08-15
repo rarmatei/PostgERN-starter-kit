@@ -6,6 +6,8 @@ const createSchema = fs.readFileSync(require.resolve("./recreate-schema.sql")).t
 const populateDb = fs.readFileSync(require.resolve("./populate-db.sql")).toString();
 const pool = new Pool(config);
 
+console.log('yo');
+
 queryDb(createSchema)
   .then(() => queryDb(populateDb))
   .then(() => process.exit(0));
