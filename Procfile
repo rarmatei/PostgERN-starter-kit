@@ -1,1 +1,1 @@
-release: npm --prefix server run ci-create-db
+release: npm --prefix server run recreate-db:prod
