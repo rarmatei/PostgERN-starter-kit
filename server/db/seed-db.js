@@ -1,5 +1,5 @@
 const { Pool } = require("pg");
-const config = require("./db-config")[process.env.NODE_ENV || "development"];
+const config = require("../config");
 const fs = require("fs");
 
 const createSchema = fs.readFileSync(require.resolve("./recreate-schema.sql")).toString();

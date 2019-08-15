@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
     development: {
         user: "postgres",
         host: "localhost",
@@ -10,3 +10,7 @@ module.exports = {
       connectionString: process.env.DATABASE_URL
     }
   };
+
+  const env = process.env.NODE_ENV;
+
+  module.exports = config[env];
