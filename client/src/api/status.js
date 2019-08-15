@@ -3,9 +3,9 @@ export const getStatus = () => {
 }
 
 export const getUsers = () => {
-    return fetch('/api/users');
+    return fetch('/api/users').then(res => res.json());
 }
 
 export const getHotels = () => {
-    return fetch('/api/hotels');
+    return fetch('/api/hotels').then(res => res.json());;
 }
