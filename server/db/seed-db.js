@@ -11,12 +11,14 @@ queryDb(createSchema)
   .then(() => process.exit(0));
 
 function queryDb(query) {
-  return new Promise(() => {
+  return new Promise((resolve, error) => {
     pool.query(query, function(err, result) {
       if (err) {
         console.log("error: ", err);
+        error(err);
         process.exit(1);
       }
+      resolve();
     });
   });
 }
