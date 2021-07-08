@@ -7,9 +7,10 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "prettier-standard './**/*.js'",
-    "dev": "nodemon app.js",
-    "create-db": "echo \"ToDo: create DB\"",
-    "ci-create-db": "echo \"ToDo: create DB\""
+    "dev": "NODE_ENV=development nodemon app.js",
+    "recreate-db:prod": "NODE_ENV=production node ./__db/seed-db.js",
+    "recreate-db": "node ./__db/seed-db.js",
+    "initial-db-setup": "psql -U postgres -f __db/initial-setup.sql && npm run recreate-db"
   },
   "author": "",
   "license": "ISC",
